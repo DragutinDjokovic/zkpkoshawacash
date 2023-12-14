@@ -270,7 +270,7 @@ const Interface = () => {
                                             </div>
                                         ) : (
                                             <div>
-                                                <p className="text-secondary">Note: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
+                                                <p className="text-secondary">NoteSSS: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
                                                 <button 
                                                     className="btn btn-success" 
                                                     onClick={depositEther}
