@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 
 const wc = require("../circuit/witness_calculator.js");
 
-const tornadoAddress = "0x06DB9c2856Eab779B2794E98c769a2e6aDA4D4b6";
+const tornadoAddress = "0xA2628945A18E1944693dEE9fd40e10F81F4F62A9";
 
 const tornadoJSON = require("../json/Tornado.json");
 const tornadoABI = tornadoJSON.abi;
@@ -38,8 +38,8 @@ const Interface = () => {
             var accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
             var chainId = window.ethereum.networkVersion;
 
-            if(chainId != "5"){
-                alert("Please switch to Goerli Testnet");
+            if(chainId != "11155111"){
+                alert("Please switch to Sepolia Testnet");
                 throw "wrong-chain";
             }
 
@@ -199,7 +199,7 @@ const Interface = () => {
                         </div>
                     ) : (
                         <div className="container">
-                            <div className="navbar-left"><h5>NFTA-Tornado</h5></div>
+                            <div className="navbar-left"><h5>Koshawa Cash</h5></div>
                             <div className="navbar-right">
                                 <button 
                                     className="btn btn-primary" 
@@ -270,7 +270,7 @@ const Interface = () => {
                                             </div>
                                         ) : (
                                             <div>
-                                                <p className="text-secondary">NoteSSS: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
+                                                <p className="text-secondary">Note: All deposits and withdrawals are of the same denomination of 0.1 ETH.</p>
                                                 <button 
                                                     className="btn btn-success" 
                                                     onClick={depositEther}
@@ -329,7 +329,7 @@ const Interface = () => {
 
                     <div className="card-footer p-4" style={{ lineHeight: "15px" }}>
                         <span className="small text-secondary" style={{ fontSize: "12px" }}>
-                            <strong>Disclaimer:</strong> Products intended for educational purposes are <i>not</i> to be used with commercial intent. NFTA, the organization who sponsored the development of this project, explicitly prohibits and assumes no responsibilities for losses due to such use.
+                            <strong>Disclaimer:</strong> Products intended for educational purposes are <i>not</i> to be used with commercial intent.
                         </span>
                     </div>
                 </div>
